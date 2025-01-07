@@ -65,8 +65,8 @@ export default function Signup () {
 
   return (
     <>
-      <header className='flex bg-white z-40 items-center top-0 h-[70px] relative  w-full justify-between shadow-lg'>
-        <nav className='flex bg-white z-40 items-center px-6 fixed  h-[70px] w-full justify-between shadow-lg'>
+      <header className='flex bg-white z-40 items-center top-0 h-[70px] relative  w-full justify-between shadow-sm'>
+        <nav className='flex bg-white z-40 items-center px-6 fixed  h-[70px] w-full justify-between shadow-sm'>
           <video
             src='/assets/techease.mp4'
             autoPlay

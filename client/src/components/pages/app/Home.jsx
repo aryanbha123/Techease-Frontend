@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import Contact from './Contact'
+import About from './About'
+import Showcase from './Showcase'
+import Content from './Content'
+import Features from './Features'
 
 export default function Home () {
   const settings = {
@@ -14,12 +18,15 @@ export default function Home () {
     <>
       <section className='max-w-[100vw]'>
         <Slider className='max-w-[100vw] overflow-hidden' {...settings}>
-          <div className='w-full'>
+          <div className='w-full relative'>
             <img
               className='min-h-[400px] object-cover object-center w-full'
               src='/assets/bg-1.jpg'
               alt=''
             />
+            <div className='absolute w-full h-full top-10 left-10 z-40'>
+              <h1>Learn with Us</h1>
+            </div>
           </div>
           <div className='w-full'>
             <img
@@ -27,6 +34,9 @@ export default function Home () {
               src='/assets/bg-1.jpg'
               alt=''
             />
+             <div className='absolute w-full h-full top-10 left-10 z-40'>
+              <h1>Learn with Us</h1>
+            </div>
           </div>
           <div className='w-full'>
             <img
@@ -34,10 +44,13 @@ export default function Home () {
               src='/assets/bg-1.jpg'
               alt=''
             />
+             <div className='absolute w-full h-full top-10 left-10 z-40'>
+              <h1>Learn with Us</h1>
+            </div>
           </div>
         </Slider>
       </section>
-      <section className='md:px-5 mt-10 py-3 px-3'>
+      {/* <section className='md:px-5 mt-10 py-3 px-3'>
         <h1 className='mb-4 text-[28px] font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-4xl'>
           One Platform with all Solution
         </h1>
@@ -100,25 +113,31 @@ export default function Home () {
             ></Card>
           </Slider>
         </div>
-      </section>
+      </section> */}
+
+      <Features/>
+
+      {/* <Showcase/> */}
+      <Content />
+      <About />
       <section className='md:py-16 py-5 '>
         <div className='mx-auto max-w-7xl px-4'>
           <div className='mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto'>
             <div className='relative w-full text-center lg:text-left lg:w-2/4'>
               <h2 className='text-2xl text-start font-bold text-gray-900 leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0'>
-                Enjoy the finest features with our products
+                Get the best solution from our experts
               </h2>
             </div>
             <div className='relative w-full text-center  lg:text-left lg:w-2/4'>
               <p className='text-lg text-start font-normal text-gray-500 mb-5'>
-                We provide all the advantages that can simplify all your
-                financial transactions without any further requirements
+                We provide all the advantages that can simplify all your learnig
+                and help in you journey
               </p>
               <a
                 href='#'
                 className='flex flex-row items-center justify-center gap-2 text-base font-semibold text-[#0149ad] lg:justify-start hover:text-[#0149ad] '
               >
-                Button CTA{' '}
+                Sign Up{' '}
                 <svg
                   width='20'
                   height='20'
@@ -155,11 +174,11 @@ export default function Home () {
                 </svg>
               </div>
               <h4 className='text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white'>
-                Easy Payment
+                Practice Quizes
               </h4>
               <p className='text-sm font-normal text-gray-500 transition-all duration-500 leading-5 group-hover:text-white'>
-                We Provide Various Methods For You To Carry Out All Transactions
-                Related To Your Finances
+                Enhance your knowledge with interactive quizzes tailored to
+                boost learning and improve retention.
               </p>
             </div>
             <div className='group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-[#0149ad]'>
@@ -181,11 +200,11 @@ export default function Home () {
                 </svg>
               </div>
               <h4 className='text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white'>
-                Safe Transaction
+                Roadmaps
               </h4>
               <p className='text-sm font-normal text-gray-500 transition-all duration-500 leading-5 group-hover:text-white'>
-                We have the most up-to-date security to support the security of
-                all our customers in carrying out all transactions.
+                Structured learning paths to help you master skills and achieve
+                your academic or career goals.
               </p>
             </div>
             <div className='group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-[#0149ad]'>
@@ -207,11 +226,11 @@ export default function Home () {
                 </svg>
               </div>
               <h4 className='text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white'>
-                Fast Customer Service{' '}
+                Guidance Sessions{' '}
               </h4>
               <p className='text-sm font-normal text-gray-500 transition-all duration-500 leading-5 group-hover:text-white'>
-                Provide Customer Service For Those Of You Who Have Problems 24
-                Hours A Week
+                Personalized mentorship to clarify doubts, explore
+                opportunities, and make informed career decisions.
               </p>
             </div>
             <div className='group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-[#0149ad]'>
@@ -233,60 +252,22 @@ export default function Home () {
                 </svg>
               </div>
               <h4 className='text-xl font-semibold text-gray-900 mb-3 capitalize transition-all duration-500 group-hover:text-white'>
-                Quick Transaction
+                Jobs & Hackathons
               </h4>
               <p className='text-sm font-normal text-gray-500 transition-all duration-500 leading-5 group-hover:text-white'>
-                We provide faster transaction speeds than competitors, so money
-                arrives and is received faster.
+                Discover exciting job opportunities and participate in
+                hackathons to showcase your talent and grow professionally.
               </p>
             </div>
           </div>
         </div>
       </section>
+
       <Team />
       <PareekshaPortalSection />
-      <Contact/>
     </>
   )
 }
-
-const Card = ({ title, desciprion, link }) => (
-  <div className='relative md:mr-2 flex flex-col items-center md:w-72 w-full my-6 bg-white shadow-sm border border-slate-200 rounded-lg'>
-    <div className='relative h-40 m-2.5 overflow-hidden text-white rounded-md'>
-      <img
-        src='https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80'
-        alt='card-image'
-      />
-    </div>
-    <div className='px-4'>
-      <h6 className='mb-2 text-gray-900 text-xl font-semibold'>{title}</h6>
-      <p className='text-slate-600 leading-normal font-light'>
-        The place is close to Barceloneta Beach and bus stop just 2 min by walk
-      </p>
-    </div>
-    <div className='px-4 pb-4 pt-0 mt-2'>
-      <Link
-        to={link}
-        className='rounded-md border border-transparent py-2 px-4 flex items-center text-center text-sm transition-all text-slate-600 hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
-        type='button'
-      >
-        Read More
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 24 24'
-          fill='currentColor'
-          className='w-4 h-4 ml-1.5'
-        >
-          <path
-            fill-rule='evenodd'
-            d='M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z'
-            clip-rule='evenodd'
-          />
-        </svg>
-      </Link>
-    </div>
-  </div>
-)
 
 const Team = () => {
   return (
@@ -352,14 +333,13 @@ const PareekshaPortalSection = () => {
           <div className='lg:pr-8 lg:pt-4'>
             <div className='lg:max-w-lg'>
               <h2 className='text-base font-semibold leading-7 text-[#0149ad]'>
-                Streamline Exams
+                Empower Learning
               </h2>
               <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-                Pareeksha Portal API
+                Pareeksha Portal
               </p>
               <p className='mt-6 text-lg leading-8 text-gray-600'>
-                The API built to simplify and scale online exam management
-                workflows for institutions.
+                A platform designed for students to learn & grow
               </p>
               <dl className='mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none'>
                 <div className='relative pl-9'>
@@ -369,13 +349,13 @@ const PareekshaPortalSection = () => {
                       viewBox='0 0 20 20'
                       fill='currentColor'
                       aria-hidden='true'
-                      className='absolute left-1 top-1 h-5 w-5 text-[#0149ad] '
+                      className='absolute left-1 top-1 h-5 w-5 text-[#0149ad]'
                     >
                       <path d='M3.196 12.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 12.87z' />
                       <path d='M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z' />
                       <path d='M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z' />
                     </svg>
-                    Template driven
+                    Practice Quizes
                   </dt>
                   <dd className='inline'>
                     Create and manage templated exam schedules, notifications,
@@ -397,11 +377,11 @@ const PareekshaPortalSection = () => {
                         clipRule='evenodd'
                       />
                     </svg>
-                    Simple, REST
+                    Mentorship Roadmaps
                   </dt>
                   <dd className='inline'>
-                    RESTful APIs to streamline integration for exam setup,
-                    progress tracking, and results.
+                    Personalized guidance for students to achieve academic and
+                    career success.
                   </dd>
                 </div>
                 <div className='relative pl-9'>
@@ -418,13 +398,12 @@ const PareekshaPortalSection = () => {
                         d='M14.5 10a4.5 4.5 0 004.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 01-.493.11 3.01 3.01 0 01-1.618-1.616.455.455 0 01.11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 00-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 103.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 11-2 0 1 1 0 012 0z'
                         clipRule='evenodd'
                       />
-                      <path d='M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 01-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196.202-.06.469-.087.777-.067.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 01-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 01-.447-.276l-1.7-3.402a.5.5 0 01.093-.577l.49-.49a.5.5 0 01.577-.094l3.402 1.7A.5.5 0 016 3.31v1.277z' />
                     </svg>
-                    Developer friendly
+                    Job Updates
                   </dt>
                   <dd className='inline'>
-                    Comprehensive documentation and examples for seamless
-                    integration into your system.
+                    Regular updates on the latest job opportunities in various
+                    industries.
                   </dd>
                 </div>
               </dl>
@@ -447,7 +426,7 @@ const PareekshaPortalSection = () => {
           <img
             src='/assets/portal.jpg'
             alt='Pareeksha Portal screenshot'
-            className='w-[48rem]  rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0'
+            className='w-[48rem] rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] mt-20 md:-ml-4 lg:-ml-0'
             width='2432'
             height='1442'
           />
