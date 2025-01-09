@@ -6,7 +6,6 @@ export default function About() {
       <section id='about' className="py-24 relative">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
           <div className="w-full justify-start items-center gap-12 grid lg:grid-cols-2 grid-cols-1">
-            {/* Images Section */}
             <div
               className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
               <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
@@ -43,7 +42,7 @@ export default function About() {
                   </div>
                   <div className="flex-col justify-start items-start inline-flex">
                     <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">1000+</h4>
-                    <h6 className="text-gray-500 text-base font-normal leading-relaxed">Engaged Learners</h6>
+                    <h6 className="text-gray-500 text-base font-normal leading-relaxed">Users</h6>
                   </div>
                   <div className="flex-col justify-start items-start inline-flex">
                     <h4 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">95%</h4>
@@ -51,10 +50,6 @@ export default function About() {
                   </div>
                 </div>
               </div>
-              <button
-                className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
-                <span className="px-1.5 text-white text-sm font-medium leading-6">Explore More</span>
-              </button>
             </div>
           </div>
         </div>

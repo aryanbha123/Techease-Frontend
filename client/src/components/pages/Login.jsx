@@ -12,7 +12,6 @@ import { signInWithPopup } from 'firebase/auth'
 import axios from 'axios'
 import { BASE_URL } from '../../config'
 import { auth, googleAuthProvider } from '../../firebase'
-import Header from '../layout/Header'
 
 export default function Login () {
   const email = useInputValidation('')
