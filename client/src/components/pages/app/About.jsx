@@ -35,7 +35,7 @@ export default function About() {
 
                   </p>
                 </div>
-                <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
+                <div className="w-full hidden  lg:justify-start justify-center items-center sm:gap-10 gap-5 md:inline-flex">
                   <div className="flex-col justify-start items-start inline-flex">
                     <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">50+</h3>
                     <h6 className="text-gray-500 text-base font-normal leading-relaxed">Interactive Quizzes</h6>

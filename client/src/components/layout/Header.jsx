@@ -1,4 +1,4 @@
-import { Close, Menu, Search } from '@mui/icons-material'
+import { Close, Menu, Search, ShortText } from '@mui/icons-material'
 import { IconButton } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import { Link as NavLink } from 'react-router-dom'
@@ -25,7 +25,7 @@ export default function Header () {
       <header className='relative h-[83px] w-full'>
         <nav
           className={`fixed w-full flex justify-between 
-           shadow-lg px-10
+           shadow-lg px-3 md:px-10
            transition-all duration-200  items-center h-[83px] top-0  bg-white z-40`}
         >
           <div className='flex items-center gap-6'>
@@ -110,7 +110,7 @@ export default function Header () {
           </div>
           <div className='lg:hidden flex'>
             <IconButton onClick={toggleMenu}>
-              <Menu />
+              <ShortText />
             </IconButton>
           </div>
         </nav>
