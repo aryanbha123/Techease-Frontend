@@ -5,13 +5,11 @@ export default function Features () {
     <div>
       <section id='features' className='md:py-16 py-5 '>
         <div className='mx-auto max-w-7xl px-4'>
-          <div className='mb-10 lg:mb-16 flex justify-center items-center flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto'>
-            <div className='relative w-full text-center lg:text-left lg:w-2/4'>
-              <h2 className='text-2xl text-start font-bold text-gray-900 leading-[3.25rem] lg:mb-6 mx-auto max-w-max lg:max-w-md lg:mx-0'>
+          <div className='mb-10 lg:mb-16 flex flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto'>
+            <div className='relative w-full text-center lg:text-left lg:w-3/4'>
+              <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>
                 Get the best solution from our experts
               </h2>
-            </div>
-            <div className='relative w-full text-center  lg:text-left lg:w-2/4'>
               <p className='text-lg text-start font-normal text-gray-500 mb-5'>
                 We provide all the advantages that can simplify all your learnig
                 and help in you journey
@@ -38,6 +36,7 @@ export default function Features () {
                 </svg>
               </a>
             </div>
+            {/* <div className='relative w-full text-center  lg:text-left lg:w-2/4'></div> */}
           </div>
           <div className='flex justify-center items-center  gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8'>
             <div className='group relative w-full bg-gray-100 rounded-2xl p-4 transition-all duration-500 max-md:max-w-md max-md:mx-auto md:w-2/5 md:h-64 xl:p-7 xl:w-1/4 hover:bg-[#0149ad]'>

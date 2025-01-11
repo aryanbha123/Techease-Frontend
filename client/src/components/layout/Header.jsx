@@ -18,18 +18,18 @@ export default function Header () {
     })
   }, [])
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen)
+    // setMenuOpen(!menuOpen)
   }
   return (
     <>
-      <header className='relative h-[80px] w-full'>
+      <header className='relative h-[83px] w-full'>
         <nav
-          className={`fixed w-full flex justify-between ${
-            !scroll ? 'px-4' : 'shadow-md px-6'
-          } transition-all duration-200  items-center h-[80px] top-0  bg-white z-40`}
+          className={`fixed w-full flex justify-between 
+           shadow-lg px-10
+           transition-all duration-200  items-center h-[83px] top-0  bg-white z-40`}
         >
           <div className='flex items-center gap-6'>
-            <img src='/assets/logo.jpg' className='h-14' alt='' />
+            <img src='/assets/logo.jpg' className='h-12' alt='' />
           </div>
           <div className='lg:flex hidden'>
             <div className='flex gap-2'>
@@ -38,16 +38,16 @@ export default function Header () {
                   to={'about'}
                   smooth
                   duration={1000}
-                  className='cursor-pointer'
+                  className='cursor-pointer nav-link'
                 >
-                  About Us
+                  About
                 </ScrollLink>
                 <ScrollLink
                   to={'features'}
                   smooth
                   offset={-20}
                   duration={1000}
-                  className='cursor-pointer'
+                  className='cursor-pointer nav-link'
                 >
                   Features
                 </ScrollLink>
@@ -56,7 +56,7 @@ export default function Header () {
                   smooth
                   offset={-60}
                   duration={1000}
-                  className='cursor-pointer'
+                  className='cursor-pointer nav-link'
                 >
                   Content
                 </ScrollLink>
@@ -64,23 +64,47 @@ export default function Header () {
                   to={'team'}
                   smooth
                   duration={1000}
-                  className='cursor-pointer'
+                  className='cursor-pointer nav-link'
                 >
-                  Team
+                  Services
                 </ScrollLink>
                 {/* <Link>Practice</Link> */}
               </div>
               <NavLink
                 to='/login'
-                class='px-6 py-2 bg-gray-900  text-white font-medium rounded-lg shadow hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 transition duration-200'
+                class='flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white bg-slate-800 hover:border-slate-800 hover:text-slate-700 hover:bg-white focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
               >
                 Login
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  viewBox='0 0 24 24'
+                  fill='currentColor'
+                  class='w-4 h-4 ml-1.5'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z'
+                    clip-rule='evenodd'
+                  />
+                </svg>
               </NavLink>
               <NavLink
                 to='/signup'
-                class='px-6 py-2 bg-[#0149ad] text-white font-medium rounded-lg shadow hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 transition duration-200'
+                class='flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-white bg-[#0149ad] hover:border-slate-800 hover:text-slate-700 hover:bg-white focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
               >
                 Sign Up
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  viewBox='0 0 24 24'
+                  fill='currentColor'
+                  class='w-4 h-4 ml-1.5'
+                >
+                  <path
+                    fill-rule='evenodd'
+                    d='M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z'
+                    clip-rule='evenodd'
+                  />
+                </svg>
               </NavLink>
             </div>
           </div>
