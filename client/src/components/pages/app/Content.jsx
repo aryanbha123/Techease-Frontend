@@ -104,7 +104,7 @@ const Content = () => {
             src=''
             autoPlay
             controls
-            className='w-[48rem] rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:mt-20 mt-3 md:-ml-4 lg:-ml-0'
+            className='w-[48rem] rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:mt-20 md:-ml-4 lg:-ml-0'
             width='2432'
             height='1442'
           />
