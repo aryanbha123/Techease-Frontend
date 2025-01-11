@@ -6,7 +6,7 @@ export default function Features () {
       <section id='features' className='md:py-16 py-5 '>
         <div className='mx-auto max-w-7xl px-4'>
           <div className='mb-10 lg:mb-16 flex flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto'>
-            <div className='relative w-full text-center lg:text-left lg:w-3/4'>
+            <div className='relative w-full text-start lg:text-left lg:w-3/4'>
               <h2 className='mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>
                 Get the best solution from our experts
               </h2>
