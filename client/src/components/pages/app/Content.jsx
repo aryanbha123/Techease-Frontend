@@ -1,8 +1,16 @@
-import { Link } from "react-router-dom";
-
+import { Link } from 'react-router-dom'
+import { fadeIn } from './Home'
+import {motion} from 'framer-motion'
 const Content = () => {
   return (
-    <section id="content" className='overflow-hidden bg-white py-8 sm:py-16'>
+    <motion.section
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeIn}
+      id='content'
+      className='overflow-hidden bg-white py-8 sm:py-16'
+    >
       <div className='mx-auto max-w-7xl px-6'>
         <div className='mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2'>
           <div className='lg:pr-8 lg:pt-4'>
@@ -83,27 +91,27 @@ const Content = () => {
                 </div>
               </dl>
               <div className='mt-10 flex items-center gap-x-6'>
-               
                 <Link
                   to='/signup'
                   className='text-sm font-semibold leading-6 text-gray-700'
                 >
-                Register <span aria-hidden='true'>→</span>
+                  Register <span aria-hidden='true'>→</span>
                 </Link>
               </div>
             </div>
           </div>
           <video
             src=''
-            autoPlay controls
+            autoPlay
+            controls
             className='w-[48rem] rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:mt-20 mt-3 md:-ml-4 lg:-ml-0'
             width='2432'
             height='1442'
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
-export default Content;
+export default Content

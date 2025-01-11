@@ -54,15 +54,17 @@
 //   )
 // }
 
+import { fadeIn } from "./Home";
+import {motion} from 'framer-motion'
 // export default Team
-
-
-
 
 
 const Content = () => {
   return (
-    <section id="hero" className=" pt-10 relative xl:mr-0 lg:mr-5 mr-0">
+    <motion.section   initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn} id="content"  className=" pt-10 relative xl:mr-0 lg:mr-5 mr-0">
       <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
         <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
           {/* Content Section */}
@@ -136,7 +138,7 @@ const Content = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,9 +1,18 @@
 import React from 'react'
+import { fadeIn } from './Home'
+import {motion} from 'framer-motion'
 
 export default function Features () {
   return (
     <div>
-      <section id='features' className='md:py-16 py-5 '>
+      <motion.section
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        id='features'
+        className='md:py-16 py-5 '
+      >
         <div className='mx-auto max-w-7xl px-4'>
           <div className='mb-10 lg:mb-16 flex flex-col gap-x-0 gap-y-6 lg:gap-y-0 lg:flex-row lg:justify-between max-md:max-w-lg max-md:mx-auto'>
             <div className='relative w-full text-start lg:text-left lg:w-3/4'>
@@ -143,7 +152,7 @@ export default function Features () {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   )
 }
