@@ -18,18 +18,20 @@ export default function Header () {
     })
   }, [])
   const toggleMenu = () => {
-    // setMenuOpen(!menuOpen)
+    setMenuOpen(!menuOpen)
   }
   return (
     <>
-      <header className='relative h-[83px] w-full'>
+      <header id='home' className='relative h-[83px] w-full'>
         <nav
           className={`fixed w-full flex justify-between 
            shadow-lg px-3 md:px-10
            transition-all duration-200  items-center h-[83px] top-0  bg-white z-40`}
         >
           <div className='flex items-center gap-6'>
-            <img src='/assets/logo.jpg' className='h-12' alt='' />
+            <ScrollLink to='home' smooth className='cursor-pointer' >
+              <img src='/assets/logo.jpg' className='h-12' alt='' />
+            </ScrollLink>
           </div>
           <div className='lg:flex hidden'>
             <div className='flex gap-2'>
@@ -45,7 +47,7 @@ export default function Header () {
                 <ScrollLink
                   to={'features'}
                   smooth
-                  offset={-20}
+                  offset={-60}
                   duration={1000}
                   className='cursor-pointer nav-link'
                 >
@@ -58,15 +60,15 @@ export default function Header () {
                   duration={1000}
                   className='cursor-pointer nav-link'
                 >
-                  Content
+                  Quiz Portal
                 </ScrollLink>
                 <ScrollLink
-                  to={'team'}
+                  to={'contact'}
                   smooth
                   duration={1000}
                   className='cursor-pointer nav-link'
                 >
-                  Services
+                  Contact Us
                 </ScrollLink>
                 {/* <Link>Practice</Link> */}
               </div>
@@ -110,31 +112,31 @@ export default function Header () {
           </div>
           <div className='lg:hidden flex'>
             <IconButton onClick={toggleMenu}>
-              <ShortText />
+              <Menu />
             </IconButton>
           </div>
         </nav>
 
         {/* Small Screen Nab */}
+        <span onClick={toggleMenu} className={`${menuOpen ? '' : 'hidden ' } fixed top-0 left-0 z-40 h-[100vh] w-[100vw] bg-black bg-opacity-60`}></span>
         <header
           className={` ${
             menuOpen ? 'translate-x-0' : '-translate-x-full'
-          }   fixed bg-white duration-300 transition-all z-40 h-screen left-0 top-0 w-[250px]`}
+          }   fixed bg-white duration-300 transition-all z-50 h-screen left-0 top-0 w-[250px]`}
         >
+       
           <div className='w-full absolute flex justify-end p-2'>
-            <IconButton onClick={toggleMenu}>
+            {/* <IconButton onClick={toggleMenu}>
               <Close />
-            </IconButton>
+            </IconButton> */}
           </div>
           <ul className='px-5 py-7 flex justify-between h-full flex-col'>
             <div className='flex flex-col gap-2 '>
-              <img className='w-[45px]' src='/assets/logo.jpg' alt='' />
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
-              <li>Home</li>
+              <img className='w-[100px]' src='/assets/logo.jpg' alt='' />
+              <ScrollLink onClick={() => {setMenuOpen(false)}} smooth duration={500} to='about' className='smNavLink '>About</ScrollLink>
+              <ScrollLink onClick={() => {setMenuOpen(false)}} smooth duration={500} to='features' className='smNavLink '>Features</ScrollLink>
+              <ScrollLink onClick={() => {setMenuOpen(false)}} smooth duration={500} to='content' className='smNavLink '>Quiz Portal</ScrollLink>
+              <ScrollLink onClick={() => {setMenuOpen(false)}} smooth duration={500} to='contact' className='smNavLink '>Contact</ScrollLink>
             </div>
             <div>
               <button className='button'>Login</button>

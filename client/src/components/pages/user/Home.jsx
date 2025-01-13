@@ -134,47 +134,7 @@ export default function Home () {
           ))}
         </div>
       </section>
-      <Slider autoplay autoplaySpeed={2000} {...sliderSettings} className='bg-white  gap-3 dark:bg-gray-900 mt-5 shadow-xl rounded-[20px] p-5'>
-        <blockquote
-        style={{
-          width:"auto"
-        }}
-          className='instagram-media'
-          data-instgrm-captioned
-          data-instgrm-permalink='https://www.instagram.com/p/DD6ksVczelR/?utm_source=ig_embed&amp;utm_campaign=loading'
-          data-instgrm-version='14'
-        ></blockquote>
-        <blockquote
-          className='instagram-media '
-          data-instgrm-captioned
-          data-instgrm-permalink="https://www.instagram.com/p/DD6k7eczXIf/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version='14'
-        ></blockquote>
-        <blockquote
-          className='instagram-media '
-          data-instgrm-captioned
-          data-instgrm-permalink="https://www.instagram.com/p/DD6k3B8z4O5/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version='14'
-        ></blockquote>
-        <blockquote
-          className='instagram-media '
-          data-instgrm-captioned
-          data-instgrm-permalink="https://www.instagram.com/p/DD6lHN_TJ-k/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version='14'
-        ></blockquote>
-        <blockquote
-          className='instagram-media '
-          data-instgrm-captioned
-          data-instgrm-permalink="https://www.instagram.com/p/DD6knrtzN3W/?utm_source=ig_embed&amp;utm_campaign=loading" 
-          data-instgrm-version='14'
-        ></blockquote>
-        <blockquote
-          className='instagram-media '
-          data-instgrm-captioned
-          data-instgrm-permalink="https://www.instagram.com/p/DD6khWnT62G/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version='14'
-        ></blockquote>
-      </Slider>
+      
     </>
   )
 }

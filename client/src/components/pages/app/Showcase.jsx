@@ -7,6 +7,7 @@ export default function Showcase () {
     {
       id: 1,
       title: 'Practice Quizzes',
+      icon:'/icons/quiz.png',
       content:
         'Interactive quizzes to help you strengthen your knowledge across various subjects and skills.',
       image:
@@ -15,6 +16,7 @@ export default function Showcase () {
     {
       id: 2,
       title: 'Roadmaps',
+      icon:'/icons/roadmap.png',
       content:
         'Detailed learning paths to guide you step-by-step in mastering your desired field or skill.',
       image:
@@ -23,6 +25,7 @@ export default function Showcase () {
     {
       id: 3,
       title: 'Mentorship',
+      icon: '/icons/mentorship.png' ,
       content:
         'One-on-one or group mentoring sessions with industry experts to accelerate your growth.',
       image:
@@ -31,6 +34,7 @@ export default function Showcase () {
     {
       id: 4,
       title: 'Jobs & Hackathon',
+      icon:'/icons/jobs.png',
       content:
         'Professional design services, including logos, business cards, and branding to elevate your business.',
       image:
@@ -40,6 +44,7 @@ export default function Showcase () {
 
   return (
     <motion.section
+    id='features'
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, amount: 0.2 }}
@@ -50,12 +55,12 @@ export default function Showcase () {
         <div className='-mx-4 flex flex-wrap'>
           <div className='w-full px-4'>
             <div className=' mb-[60px] text-gray-900 w-full text-start'>
-              <h2 className='mb-4  text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>
+              <h2 className='mb-4  text-4xl tracking-tight font-bold text-gray-900 dark:text-white'>
                 Dream big , Learn More
               </h2>
-              <p className='text-body-color text-base dark:text-dark-6'>
+              {/* <p className='text-body-color text-base dark:text-dark-6'>
                 Your Journey Begins Here
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
@@ -88,6 +93,7 @@ export default function Showcase () {
             //   </div>
             // </div>
             <Card
+            icon={project.icon || null}
               description={project.content}
               heading={project.title}
               index={project.id}

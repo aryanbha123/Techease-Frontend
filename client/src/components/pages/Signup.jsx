@@ -8,6 +8,7 @@ import { auth, googleAuthProvider } from '../../firebase'
 import { useDispatch, useSelector } from 'react-redux'
 import { loginSuccess, setLoading } from '../../redux/reducers/userSlice'
 import { Link } from 'react-router-dom'
+import { Home } from '@mui/icons-material'
 
 export default function Signup () {
   const email = useInputValidation('')
@@ -75,7 +76,7 @@ export default function Signup () {
             playsInline
             className='h-[70px]'
           ></video>
-          <Link
+          {/* <Link
             to={'/'}
             class='flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
             type='button'
@@ -93,6 +94,9 @@ export default function Signup () {
                 clip-rule='evenodd'
               />
             </svg>
+          </Link> */}
+          <Link to={'/'}>
+            <Home />
           </Link>
         </nav>
       </header>
@@ -201,7 +205,7 @@ export default function Signup () {
             {/* <img className='w-24 rounded-xl' src='/assets/image.png' alt='' /> */}
           </div>
           <h2 className='text-xl font-bold text-gray-800  font-sans'>
-            Hello User 👋 ! Tell us about yourself
+            Hello User 👋
           </h2>
 
           <div className='flex flex-col'>
@@ -233,7 +237,7 @@ export default function Signup () {
             <label>Email </label>
           </div>
           <div className='inputForm'>
-            <EmailSvg />
+            <EmailSvg color='#000' />
             <input
               required
               value={email.value}

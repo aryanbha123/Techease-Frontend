@@ -12,6 +12,7 @@ import { signInWithPopup } from 'firebase/auth'
 import axios from 'axios'
 import { BASE_URL } from '../../config'
 import { auth, googleAuthProvider } from '../../firebase'
+import { Home } from '@mui/icons-material'
 
 export default function Login () {
   const email = useInputValidation('')
@@ -68,7 +69,7 @@ export default function Login () {
             playsInline
             className='h-[70px]'
           ></video>
-          <Link
+          {/* <Link
             to={'/'}
             class='flex items-center rounded-md border border-slate-300 py-2 px-4 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-slate-800 focus:text-white focus:bg-slate-800 focus:border-slate-800 active:border-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
             type='button'
@@ -86,6 +87,9 @@ export default function Login () {
                 clip-rule='evenodd'
               />
             </svg>
+          </Link> */}
+          <Link to={'/'}>
+           <Home/>
           </Link>
         </nav>
       </header>
@@ -104,7 +108,7 @@ export default function Login () {
             <label>Email </label>
           </div>
           <div className='inputForm'>
-            <EmailSvg />
+            <EmailSvg color='#000' />
             <input
               required
               value={email.value}
